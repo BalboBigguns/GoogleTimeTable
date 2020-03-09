@@ -5,7 +5,7 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-import updateDB
+import calendarParser
 
 
 # If modifying these scopes, delete the file token.pickle.
@@ -113,15 +113,25 @@ def clearThisWeek():
     """Deletes all events of ongoing week"""
     print("Clearing current week...")
     num = clearWeek(datetime.date.today())
-    print("Successfully deleted {} events".format(num))
+    print("Successfully deleted - {} events".format(num))
+
+
+def clearTimeSpan(startDate, endDate):
+    if (not (startDate and endDate)):
+        return clearThisWeek()
+    else:
+        start = startDate.isoformat() + 'Z'
+        end = endDate.isoformat() + 'Z'
+        response = service.events().list(calendarId=FRENCH_CALENDAR_ID, timeMin=start, timeMax=end).execute()
+        return deleteEvents(response["items"])
 
 
 def uploadDB():
     """Uploads all the events from the database"""
     print("Uploading courses...")
-    courses = updateDB.getCourses()
+    courses = calendarParser.getCourses()
     num = createEvents(courses)
-    print("Successfully created {} events".format(num))
+    print("Successfully created - {} events".format(num))
 
 def weekRange(date):
     """Find the first/last day of the week for the given day.
@@ -149,9 +159,10 @@ def weekRange(date):
 
 
 def main():
-    print("UploadToCalendar running...")
-    courses = updateDB.getCourses()
-    print(createEvent(courses[6]))
+    print("Google Calendar upload running...")
+    calendarParser.main()
+    clearThisWeek()
+    uploadDB()
  
 
 if __name__ == '__main__':

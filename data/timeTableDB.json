@@ -1,89 +1,97 @@
 [
     {
-        "DTSTART": "2020-03-04T10:30:00",
-        "DTEND": "2020-03-04T12:30:00",
-        "SUMMARY": "P.Col_Accompagnement_G1_FM",
-        "LOCATION": "Shannon",
-        "DESCRIPTION": "  DI_4A_S8 MORIN FREDERIC ",
+        "DTSTART": "2020-03-10T08:15:00",
+        "DTEND": "2020-03-10T10:15:00",
+        "SUMMARY": "P.Col_R\u00e9alisation",
+        "LOCATION": "",
+        "DESCRIPTION": "  DI_4A_S8 ",
         "TYPE": "PROJECT"
     },
     {
-        "DTSTART": "2020-03-04T08:15:00",
-        "DTEND": "2020-03-04T10:15:00",
-        "SUMMARY": "P.Col_Accompagnement_G2_FM",
-        "LOCATION": "Shannon",
-        "DESCRIPTION": "  DI_4A_S8 MORIN FREDERIC ",
+        "DTSTART": "2020-03-09T08:15:00",
+        "DTEND": "2020-03-09T10:15:00",
+        "SUMMARY": "P.Col_R\u00e9alisation",
+        "LOCATION": "",
+        "DESCRIPTION": "  DI_4A_S8 ",
         "TYPE": "PROJECT"
     },
     {
-        "DTSTART": "2020-03-06T10:30:00",
-        "DTEND": "2020-03-06T12:30:00",
-        "SUMMARY": "ASR_OutilsSynchro_CM_TR",
+        "DTSTART": "2020-03-13T08:15:00",
+        "DTEND": "2020-03-13T10:15:00",
+        "SUMMARY": "IL_C++_CM_VTK",
         "LOCATION": "Turing",
-        "DESCRIPTION": "  DI_3A_S6 Mundus - DI RAULT TIFENN jeton_Mundus_DI ",
-        "TYPE": "LECTURE"
-    },
-    {
-        "DTSTART": "2020-03-02T10:30:00",
-        "DTEND": "2020-03-02T12:30:00",
-        "SUMMARY": "IL_Java_CM_CE",
-        "LOCATION": "Turing",
-        "DESCRIPTION": "  DI_3A_S6 ESSWEIN CARL ",
-        "TYPE": "LECTURE"
-    },
-    {
-        "DTSTART": "2020-03-03T08:15:00",
-        "DTEND": "2020-03-03T10:15:00",
-        "SUMMARY": "ASR_OutilsSynchro_CM_TR",
-        "LOCATION": "Pascal",
-        "DESCRIPTION": "  DI_3A_S6 Mundus - DI RAULT TIFENN jeton_Mundus_DI ",
-        "TYPE": "LECTURE"
-    },
-    {
-        "DTSTART": "2020-03-06T08:15:00",
-        "DTEND": "2020-03-06T10:15:00",
-        "SUMMARY": "IL_ET_Algorithmique_Objet_VTK",
-        "LOCATION": "Amphi Dassault\\,Amphi Dassault",
-        "DESCRIPTION": "  DI_3A_S6 Mundus - DI T'KINDT VINCENT jeton_Mundus_DI  ExamDI ",
-        "TYPE": "EXAM"
-    },
-    {
-        "DTSTART": "2020-03-02T16:15:00",
-        "DTEND": "2020-03-02T18:15:00",
-        "SUMMARY": "IL_MOO_UML_CM_VTK",
-        "LOCATION": "Pascal",
         "DESCRIPTION": "  DI_3A_S6 Mundus - DI T'KINDT VINCENT jeton_Mundus_DI  ",
         "TYPE": "LECTURE"
     },
     {
-        "DTSTART": "2020-03-04T14:00:00",
-        "DTEND": "2020-03-04T16:00:00",
+        "DTSTART": "2020-03-11T16:15:00",
+        "DTEND": "2020-03-11T18:15:00",
+        "SUMMARY": "ASR_OutilsSynchro_TD_G2_TR",
+        "LOCATION": "224 (TP Syst\u00e8mes)",
+        "DESCRIPTION": "  DI_3A_G2 RAULT TIFENN ",
+        "TYPE": "TUTORIAL"
+    },
+    {
+        "DTSTART": "2020-03-10T10:30:00",
+        "DTEND": "2020-03-10T12:30:00",
+        "SUMMARY": "IL_MOO_UML_TD_G2_VTK",
+        "LOCATION": "Boole",
+        "DESCRIPTION": "  DI_3A_G2 T'KINDT VINCENT ",
+        "TYPE": "TUTORIAL"
+    },
+    {
+        "DTSTART": "2020-03-13T14:00:00",
+        "DTEND": "2020-03-13T16:00:00",
+        "SUMMARY": "IL_Java_CM_CE",
+        "LOCATION": "Pascal",
+        "DESCRIPTION": "  DI_3A_S6 ESSWEIN CARL ",
+        "TYPE": "LECTURE"
+    },
+    {
+        "DTSTART": "2020-03-13T10:30:00",
+        "DTEND": "2020-03-13T12:30:00",
+        "SUMMARY": "ASR_OutilsSynchro_CM_TR",
+        "LOCATION": "Pascal",
+        "DESCRIPTION": "  DI_3A_S6 Mundus - DI RAULT TIFENN jeton_Mundus_DI ",
+        "TYPE": "LECTURE"
+    },
+    {
+        "DTSTART": "2020-03-11T14:00:00",
+        "DTEND": "2020-03-11T16:00:00",
         "SUMMARY": "IL_MOO_UML_TD_G2_VTK",
         "LOCATION": "Von Neumann",
         "DESCRIPTION": "  DI_3A_G2 T'KINDT VINCENT ",
         "TYPE": "TUTORIAL"
     },
     {
-        "DTSTART": "2020-03-03T10:30:00",
-        "DTEND": "2020-03-03T12:30:00",
-        "SUMMARY": "IL_MOO_UML_CM_VTK",
+        "DTSTART": "2020-03-09T10:30:00",
+        "DTEND": "2020-03-09T12:30:00",
+        "SUMMARY": "IL_Java_CM_CE",
         "LOCATION": "Pascal",
-        "DESCRIPTION": "  DI_3A_S6 Mundus - DI T'KINDT VINCENT jeton_Mundus_DI  ",
+        "DESCRIPTION": "  DI_3A_S6 ESSWEIN CARL ",
         "TYPE": "LECTURE"
     },
     {
-        "DTSTART": "2020-03-03T16:45:00",
-        "DTEND": "2020-03-03T18:45:00",
-        "SUMMARY": "LO Rome A2",
-        "LOCATION": "TA EXT Salle 12",
+        "DTSTART": "2020-03-10T14:00:00",
+        "DTEND": "2020-03-10T16:00:00",
+        "SUMMARY": "IL_MOO_UML_TD_G2_VTK",
+        "LOCATION": "Von Neumann",
+        "DESCRIPTION": "  DI_3A_G2 T'KINDT VINCENT ",
+        "TYPE": "TUTORIAL"
+    },
+    {
+        "DTSTART": "2020-03-10T13:00:00",
+        "DTEND": "2020-03-10T15:00:00",
+        "SUMMARY": "LEG Rome A2",
+        "LOCATION": "TA EXT Salle 11",
         "DESCRIPTION": "  Objectif A2 + IDOH LABARRERE JOSEPHA ",
         "TYPE": "CUEFEE"
     },
     {
-        "DTSTART": "2020-03-03T13:00:00",
-        "DTEND": "2020-03-03T15:00:00",
-        "SUMMARY": "LEG Rome A2",
-        "LOCATION": "TA EXT Salle 11",
+        "DTSTART": "2020-03-10T16:45:00",
+        "DTEND": "2020-03-10T18:45:00",
+        "SUMMARY": "LO Rome A2",
+        "LOCATION": "TA EXT Salle 12",
         "DESCRIPTION": "  Objectif A2 + IDOH LABARRERE JOSEPHA ",
         "TYPE": "CUEFEE"
     }

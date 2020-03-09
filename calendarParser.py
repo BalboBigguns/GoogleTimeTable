@@ -1,7 +1,7 @@
 import re
+import json
 import datetime as dt
 from os import listdir
-import updateDB
 
 # .ics date format
 DATE_READ_FORMAT = r'%Y%m%dT%H%M%SZ'
@@ -15,6 +15,40 @@ EVENT_TYPE = {
     'ET' : 'EXAM',
     'CC' : 'EXAM',
     }
+
+
+def getCourseRegister():
+    """Loads register from data/courseRegister.json file"""
+    with open("data/courseRegister.json", 'r', encoding='utf8') as f:
+        courseRegister = json.load(f)
+
+    return courseRegister
+
+def setCourseRegister(register):
+    """Dumps register to data/courseRegister.json file"""
+    with open("data/courseRegister.json", 'w', encoding='utf8') as f:
+        json.dump(register, f)
+
+
+def getCourses():
+    """Loads events data from data/timeTableDB.json file"""
+    with open("data/timeTableDB.json", 'r', encoding='utf8') as f:
+        courses = json.load(f)
+
+    return courses
+
+
+def setCourses(courses):
+    """Dumps courses data to data/timeTableDB.json file"""
+    with open("data/timeTableDB.json", 'w', encoding='utf8') as f:
+        json.dump(courses, f)
+
+
+def appendCourses(courses):
+    """Appends courses to the end of timeTableDB.json file"""
+    stateDB = getCourses()
+    stateDB = [*stateDB, *courses]
+    setCourses(stateDB)
 
 
 def parseTime(timeStr):
@@ -32,7 +66,7 @@ def parseType(summary):
     
 
 def parseFile(file):
-    """Parses raw .ics file into Google Calendar compatibile objects"""
+    """Parses raw .ics file. Returns Google Calendar compatibile objects"""
     # read the text and split it into lines
     o = file.read().splitlines()
     # recombine all the lines together
@@ -67,7 +101,7 @@ def parseFile(file):
 
 def filterEvents(events):
     """Filters provided events according to register (data/courseRegister.json) configuration"""
-    courseRegister = updateDB.getCourseRegister()
+    courseRegister = getCourseRegister()
     isNew = False
     delList = []
     for e in events:
@@ -85,7 +119,7 @@ def filterEvents(events):
     events = [d for d in events if d not in delList]
 
     if (isNew):
-        updateDB.setCourseRegister(courseRegister)
+        setCourseRegister(courseRegister)
 
     return events
 
@@ -96,7 +130,7 @@ def main():
     for ics in listdir("downloads"):
         with open("downloads/" + ics, "r") as f:
             events = [*events, *parseFile(f)]
-    updateDB.setCourses(filterEvents(events))
+    setCourses(filterEvents(events))
     print("Finished")
 
 
